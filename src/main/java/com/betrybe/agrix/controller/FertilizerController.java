@@ -8,6 +8,7 @@ import com.betrybe.agrix.service.exception.FertilizerNotFoundException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,11 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/fertilizers")
-public class FerlizerController {
+public class FertilizerController {
   private final FertilizerService fertilizerService;
 
   @Autowired
-  public FerlizerController(FertilizerService fertilizerService) {
+  public FertilizerController(FertilizerService fertilizerService) {
     this.fertilizerService = fertilizerService;
   }
 
@@ -49,6 +50,7 @@ public class FerlizerController {
    * @return the all fertilizers
    */
   @GetMapping
+  @PreAuthorize("hasAuthority('ROLE_ADMIN')")
   public List<FertilizerDto> getAllFertilizers() {
     List<Fertilizer> allFertilizers = fertilizerService.findAll();
 
