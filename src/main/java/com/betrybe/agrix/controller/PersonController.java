@@ -1,7 +1,7 @@
 package com.betrybe.agrix.controller;
 
-import com.betrybe.agrix.controller.dto.PersonCreationDto;
-import com.betrybe.agrix.controller.dto.PersonDto;
+import com.betrybe.agrix.dto.PersonCreationDto;
+import com.betrybe.agrix.dto.PersonDto;
 import com.betrybe.agrix.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

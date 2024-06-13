@@ -1,7 +1,7 @@
 package com.betrybe.agrix.controller;
 
-import com.betrybe.agrix.controller.dto.FertilizerCreationDto;
-import com.betrybe.agrix.controller.dto.FertilizerDto;
+import com.betrybe.agrix.dto.FertilizerCreationDto;
+import com.betrybe.agrix.dto.FertilizerDto;
 import com.betrybe.agrix.entity.Fertilizer;
 import com.betrybe.agrix.service.FertilizerService;
 import com.betrybe.agrix.service.exception.FertilizerNotFoundException;
@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/fertilizers")
 public class FertilizerController {
+
   private final FertilizerService fertilizerService;
 
   @Autowired

@@ -1,4 +1,4 @@
-package com.betrybe.agrix.controller.dto;
+package com.betrybe.agrix.dto;
 
 import com.betrybe.agrix.entity.Person;
 import com.betrybe.agrix.security.Role;

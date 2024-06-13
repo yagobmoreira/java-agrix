@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * The type Global controller advice.
  */
 @ControllerAdvice
-public class HandlerExceptionController {
+public class GlobalControllerAdvice {
 
   /**
    * Handle not found response entity.

@@ -1,7 +1,7 @@
 package com.betrybe.agrix.controller;
 
-import com.betrybe.agrix.controller.dto.CropDto;
-import com.betrybe.agrix.controller.dto.FertilizerDto;
+import com.betrybe.agrix.dto.CropDto;
+import com.betrybe.agrix.dto.FertilizerDto;
 import com.betrybe.agrix.entity.Crop;
 import com.betrybe.agrix.entity.Fertilizer;
 import com.betrybe.agrix.service.CropService;
@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/crops")
 public class CropController {
+
   private final CropService cropService;
 
   @Autowired
@@ -71,7 +72,7 @@ public class CropController {
   @GetMapping("/search")
   public List<CropDto> searchCropsByHarvestDateRange(
       @RequestParam LocalDate start,
-      @RequestParam LocalDate end)  {
+      @RequestParam LocalDate end) {
     List<Crop> allCrops = cropService.findAllByHarvestDateRange(start, end);
     return allCrops.stream()
         .map(CropDto::fromEntity)

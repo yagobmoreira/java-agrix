@@ -1,9 +1,9 @@
 package com.betrybe.agrix.controller;
 
-import com.betrybe.agrix.controller.dto.CropCreationDto;
-import com.betrybe.agrix.controller.dto.CropDto;
-import com.betrybe.agrix.controller.dto.FarmCreationDto;
-import com.betrybe.agrix.controller.dto.FarmDto;
+import com.betrybe.agrix.dto.CropCreationDto;
+import com.betrybe.agrix.dto.CropDto;
+import com.betrybe.agrix.dto.FarmCreationDto;
+import com.betrybe.agrix.dto.FarmDto;
 import com.betrybe.agrix.entity.Crop;
 import com.betrybe.agrix.entity.Farm;
 import com.betrybe.agrix.service.CropService;
@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/farms")
 public class FarmController {
+
   private final FarmService farmService;
   private final CropService cropService;
 
