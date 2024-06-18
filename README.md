@@ -104,6 +104,14 @@ os parâmetros necessários, os códigos de resposta e exemplos de solicitaçõe
 
 </details>
 
+### Realização de Requisições
+
+Este arquivo contém uma coleção de endpoints para a plataforma Insomnia, que podem ser importados
+diretamente para a aplicação, simplificando o processo de teste e interação com a API.
+
+- [Insomnia_agrix.json](./Insomnia_agrix.json)
+
+
 ## Contribuições
 
 [Yago Moreira](https://www.linkedin.com/in/yagobmoreira/)
